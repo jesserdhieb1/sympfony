@@ -1,0 +1,46 @@
+-composer create-project symfony/website-skeleton projSymf ~5 //// creation d'un projet
+
+-php bin/console server:run /// pour lancer le projet
+
+-C:\xampp\htdocs\projSymf>composer require symfony/web-server-bundle --dev ^4.4.* /// pour ajouter symfony/web-server-bundle dans le composer.json
+
+-DATABASE_URL="mysql://root:@127.0.0.1:3306/'DB_name'"///faire les changement necessaire dans le fichier .env et noublie pas de'enlever et placer '#'
+
+-php bin/console doctrine:database:create///apres les modifications dans le fichier .env on va ecrire cette demande pour faire une mise a jour des BDs
+
+-php bin/console make:controller 'nom_du_controlleur'///creation d'un controlleur 
+
+-{%..........%}/// pour ajouter des commandes de TWIG dans le view
+
+-{#.........#}///pour afficher un message dans le TWIG
+
+-{{ 'nom_var' }} /// pour afficher une variable dans le view TWIG
+
+#Creation d'une table dans la BD#
+
+-php bin/console make:entity///pour creation d'un tableau dans la base de donnee (commande intelligente)
+
+-php bin/console make:migration///pour faire les modifications necaissaire dans les fichiers du projet (creation d'un fichier dans la repertoire migration et un autre dans la repertoire entity )
+
+-bin/console doctrine:migrations:migrate///pour faire les mises a jour des colones dans la base de donnee
+
+#Creation d'un formulaire#
+
+-php bin/console make:form///cette commande cree automatiquement le formulaire (cree une repertoire Form et puis un fichier au nom desiree a l'interieur )
+
+-on peut ajouter des contraintes avec php constraint dans "l'Entity" a ne pas oublier use......
+
+-https://packagist.org/ /// site pour les packages php/symfonie , suivre la documentation pour l'utiliser
+
+-twig filters a voir 
+
+- chart.js ///chart bundel 
+
+-faire des modifications sur le fichier reposetory de l'entitee desiree pour faire une fonction query bien precis 
+
+-php bin/console make:user ///pour faire un utilisateur+sys d'ithentification a changer le fichier security.yaml
+
+-a ne pas oublier route.yaml pour afficher la premiere page apres la connexion 
+
+-bundel spreadsheet , ominion , ux/chart a installer avant de lancer le projet
+

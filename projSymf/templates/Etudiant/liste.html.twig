@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}les etudiants!{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">age</th>
+            <th scope="col">NCIN</th>
+            <th scope="col">action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for etudiant in etudiants %}
+        <tr>
+            <td> {{  etudiant.nom }}</td>
+            <td> {{ etudiant.prenom }}</td>
+            <td> {{ etudiant.age }}</td>
+            <td> {{ etudiant.cin }}</td>
+            <td >
+                <a  href="{{path('delete_etudiant',{'id':etudiant.Id})}}" class="btn btn-danger" >Delete</a>
+                <a  href="{{path('update_etudiant',{'id':etudiant.Id})}}" class="btn btn-warning" >Update</a>
+
+            </td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}

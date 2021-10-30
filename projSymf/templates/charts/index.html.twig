@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChartsController!{% endblock %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+{% block body %}
+
+    {{ render_chart(chart) }}
+
+    {# You can pass HTML attributes as a second argument to add them on the <canvas> tag #}
+    {{ render_chart(chart, {'class': 'my-chart'}) }}
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
